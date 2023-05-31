@@ -1,0 +1,104 @@
+#menuContainer {
+    width: 100%;
+    height: 82%;
+    text-align: center;
+    margin: 20px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#menuContainer::-webkit-scrollbar {
+    display: none; 
+}
+
+#menuContainer h4 {
+    color: #2c2c2c;
+}
+
+#menuContainer .menuSeccion {
+    margin-top: 20px;
+}
+
+hr {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 40%;
+}
+
+.list-group-item {
+    margin: 5px;
+}
+
+.listaScroll {
+    margin-top: 0px;
+    max-height: 160px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.listaScroll::-webkit-scrollbar {
+    display: none; 
+}
+
+.listaScroll #sinTareas {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.listaScroll #sinTareas img {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.bg-projects-alerta {
+    background-color: rgb(216, 73, 73);
+}
+
+.bg-projects-normal {
+    background-color: var(--btnColor);
+}
+
+.bg-projects-bien {
+    background-color: rgb(73, 216, 73);
+}
+
+#badgeAdd{
+    background-color: #fff;
+}
+
+.bg-online {
+    background-color: #2ab353;
+}
+
+#btnOffCanvas {
+    width: 50px;
+    height: 50px;
+    background: rgb(251, 251, 250);
+    position:absolute;
+    left: 260px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+#btnOffCanvas:hover svg {
+    color:var(--btnColor);
+}
+

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    transition: 0.4s;
+    font-family: 'Varela Round', sans-serif;
+}
+
+:root {
+    --btnColor: #6C63FF;
+    
+}
+
+body {
+    background-image: url("../media/tiny_grid.png");
+}
+
+header {
+    z-index: 999;
+}
+
+section,
+main,
+#svgSeparador {
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+section {
+    top:50px
+}
+
+main {
+    background-color: #aeb4e5;
+    top:-50px;
+}
+
+aside {
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    /*background: rgb(251, 251, 250);*/
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.151);
+    box-shadow: rgba(0, 0, 0, 0.025) -1px 0px 0px 0px inset;
+    width: 260px;
+    position: absolute;
+    left: 0px;
+}
+
+
+h1,h2,h3,h4 {
+    font-family: 'Montserrat', sans-serif;
+    color:#000;
+}
+
+
+
+#svgSeparador {
+    top: -50px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#section1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+#section1 h1 {
+    font-weight: 800;
+    font-size: 4.78125rem;
+    letter-spacing: -0.06em;
+    color: #000;
+}
+
+.btn-principal {
+    font-weight: bold;
+    background-color: var(--btnColor);
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    background-color: #111;
+    color: #fff;
+
+
+}
+
+.btn-secundario {
+    font-weight: bold;
+    background-color: #111;
+    color: #fff;
+    transition: 0.4s;
+    outline: 1px solid #fff;
+    cursor: pointer;
+}
+
+.btn-secundario:hover {
+    background-color: transparent;
+    outline: 1px solid #000;
+    color: #000;
+
+}
+
+.btn-terciario {
+    font-weight: bold;
+    background-color: transparent;
+    color: #000;
+    transition: 0.4s;
+    outline: 1px solid #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn-terciario:hover {
+    outline: 1px solid #000;
+}
+
+.btn-logOut {
+    font-weight: bold;
+    background-color: #dd3d38;
+    color: #fff;
+    transition: 0.4s;
+    outline: 1px solid #fff;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.btn-logOut:hover {
+    outline: 1px solid #ca160f;
+    color: #fff;
+}

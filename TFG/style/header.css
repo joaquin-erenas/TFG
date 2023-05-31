@@ -1,0 +1,26 @@
+.navbar {
+    margin: auto;
+    background-color: transparent;
+}
+
+.navbar .navbar-brand{
+    font-weight: 800;
+    color:#000;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.separadorMenu{
+    height: 20px;
+    width: 1px;
+    background-color: rgb(184, 184, 184);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#navApp {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+    background-color: #f6f7fb;
+}

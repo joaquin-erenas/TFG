@@ -1,0 +1,169 @@
+#taskForm {
+    width: 92%;
+    height: 95%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.col-12,
+.col-6 {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.col-12 {
+    height: 100px;
+    background: transparent;
+    border-radius: 0px;
+}
+
+#newTaskGrid {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+
+}
+
+.taskCard {
+    height: 200px;
+    width: 90%;
+    outline: 1px solid rgba(0, 0, 0, 0.116);
+    border-radius: 15px;
+    margin: auto;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.taskCardImage {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 140px;
+    position:relative;
+    top: 0px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskCardImage img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+.taskCard-footer {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 60px;
+    background-color: #f0efef62;
+    position:relative;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskCard:hover {
+    transform: scale(1.05);
+}
+
+.taskCard:hover .taskCard-footer {
+    background-color: var(--btnColor);
+    color: #fff;
+}
+
+
+.allTasks {
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#taskFormContainer {
+    width: 100%;
+    height: 100%;
+
+}
+
+#taskNotFound {
+    max-height: 95%;
+    min-width: 100%;
+    margin: auto;
+}
+
+
+/* CALENDARIO */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    transition: 0.4s;
+
+}
+
+th {
+    max-width: 90px;
+    font-size: 90%;
+}
+
+td {
+    height: 20px;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: var(--btnColor);
+    color:white;
+}
+
+.today {
+    outline: 3px solid #4CAF50;
+
+}
+
+.today:hover {
+    transform: scale(1.05);
+    outline: 2px solid var(--btnColor);
+}
+
+.ocupado {
+    color: white;
+}
+
+.ocupado:hover {
+    transform: scale(1.05);
+    outline: 2px solid var(--btnColor);
+}
+
+
+
+/* ALL TASK */
+
+#btnesAllTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#btnesAllTask button {
+    max-width: 30%;
+}
+

@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portatilImg {
+    width: 100%;
+    height: 100%;
+}
+
+
+#filasPortatil{
+    margin-top: 100px;
+}
+
+#filasPortatil:nth-child(1){
+    margin-top: 0px;
+}
+
+#cuadroTextoFilasPortatil {
+    display: flex;
+    align-items: center;
+}

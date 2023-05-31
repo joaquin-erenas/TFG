@@ -1,0 +1,24 @@
+#dashboardVentana {
+    width: 92%;
+    height: 95%;
+    position: absolute;
+    bottom: 0px;
+}
+
+#dashboardVentana h4 {
+    text-align: center;
+    color: #2c2c2c;
+}
+.col {
+    height: 200px;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col:nth-child(1) {
+    justify-content:baseline;
+    align-items: flex-start;
+    flex-direction: column;
+}

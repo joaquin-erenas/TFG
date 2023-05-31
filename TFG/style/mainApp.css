@@ -1,0 +1,127 @@
+#mainApp {
+    background-color: transparent;
+    height: 94.2vh;
+    position: relative;
+    top: 55px;
+}
+
+.ventana {
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: #f0efef;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.4s;
+}
+
+.ventana .headerVentana {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ventana .headerVentana div {
+    margin: 15px;
+}
+
+.ventana .headerVentana div button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.4s;
+}
+
+.ventana .headerVentana div button:hover {
+    color: var(--btnColor);
+}
+
+.ventana .containerVentana {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: calc(100% - 50px);
+    border-bottom-right-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 0.15fr 1.85fr;
+}
+
+.ventana .containerVentana .bodyVentana {
+    background-color: #f5f5fb;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 30px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
+.appInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90%;
+    width: 90%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+}
+
+.appContainer {
+    position: relative;
+    margin: auto;
+    top: 80px;
+    width: 90%;
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+    max-width: 90%;
+}
+
+.col-12,
+.col-6 {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.col-12 {
+    height: 200px;
+    background: rgb(103,113,206);
+    background: linear-gradient(27deg, rgba(103,113,206,1) 0%, rgba(150,152,214,1) 75%);
+    border-radius: 20px;
+}
+
+.seccionVentananaInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menuLateralWindow {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+#btnGPT {
+    border-radius: 50%;
+    margin-top: 20px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    padding: 10px;
+}
