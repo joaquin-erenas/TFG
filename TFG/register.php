@@ -22,7 +22,7 @@
     <div id="contenedorLogin">
         <div id="loginGrid">
             <div id="loginImg">
-                <img src="./media/AdobeStock_237036853.jpeg" alt="">
+                <img src="./media/undraw_meet_the_team_re_4h08.svg" alt="">
             </div>
             <div id="loginForm">
                 <form action="./app/index.php" method="post" id="registerForm">

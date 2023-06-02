@@ -28,7 +28,7 @@ if(isset($_GET["taskName"])){
     }',
       CURLOPT_HTTPHEADER => array(
         'Content-Type: application/json',
-        'Authorization: Bearer '
+        'Authorization: Bearer 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'
       ),
     ));
     

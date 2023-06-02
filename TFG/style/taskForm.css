@@ -81,12 +81,18 @@
 
 
 .allTasks {
-    height: 60px;
-    border-radius: 15px;
+    /*
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;*/
 
+}
+
+.allTasks:hover {
+    /*
+    background-color: var(--btnColor);
+    color: #fff;*/
 }
 
 #taskFormContainer {

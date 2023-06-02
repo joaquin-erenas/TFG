@@ -26,6 +26,16 @@
         $p = $_POST["passwd"];
         $_SESSION["user"] = $_POST["user"];
     }
+
+    if(isset($_GET["status"]) && !empty($_GET["status"])){
+        if ($_GET["status"] == "out") {
+            session_destroy();
+            $caducarCookie = time() - 3600;
+            setcookie('user','',$caducarCookie);
+            header("Location: ./index.php?w=taskForm&status=s");
+        }
+    }
+
     ?>
 </head>
 

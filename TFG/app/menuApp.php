@@ -113,7 +113,7 @@
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center btn-terciario" id="calendarBtn">
                     See calendar
-                    <span class="badge bg-projects rounded-pill">0</span>
+                    <span class="badge bg-projects rounded-pill">🗓️</span>
                 </li>
             </ul>
         </div>
@@ -122,7 +122,7 @@
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center btn-terciario" id="friendsBtn">
                     See my friends
-                    <span class="badge bg-online rounded-pill">0</span>
+                    <span class="badge rounded-pill">👥</span>
                 </li>
             </ul>
         </div>

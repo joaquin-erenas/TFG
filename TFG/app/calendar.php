@@ -48,8 +48,6 @@
                 // Obtener tareas
 
                 $diasOcupados = array();
-
-                
                 // Generar las celdas del calendario
                 for ($row = 0; $row < 6; $row++) {
                     echo "<tr>";
@@ -58,6 +56,9 @@
                             echo "<td></td>";
                             $emptyCells--;
                         } elseif ($currentDay <= $daysInMonth) {
+                            if($currentDay >= 1 && $currentDay<=9){
+                                $currentDay = '0'.$currentDay;
+                            }
                             foreach ($todasTareas as $tarea) {
                                 if ($tarea[4] == $year . "-" . $month . "-" . $currentDay) {
                                     array_push($diasOcupados, $currentDay);

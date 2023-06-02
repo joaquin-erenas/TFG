@@ -11,30 +11,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">Dashboard</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Solutions
+                            Soluciones
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Crear tareas</a></li>
+                            <li><a class="dropdown-item" href="#">Calendario</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Inteligencia artificial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Pricing</a>
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Suscripciones</a>
                     </li>
                 </ul>
 
-                <button class="btn btn-secundario" type="submit">See different plans</button>
+                <a class="btn btn-secundario" href="../TFG/update.php">Ver diferentes planes</a>
                 <div class="separadorMenu"></div>
                 <?php
 
@@ -50,7 +47,7 @@
                     EOT;
                 } else {
                     echo <<< EOT
-                    <a href="./register.php" class="btn btn-terciario">Join us !</a>
+                    <a href="./register.php" class="btn btn-terciario">Unete !</a>
                     <a href="./login.php" class="btn btn-principal">Log in</a>
                     EOT;
                 }
@@ -67,17 +64,25 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Cerrar sesión 😴</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    Deseas cerrar la sesión de <?php echo '<b>'.$_SESSION["user"].'</b> ? '?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-logOut">Si, cerrar sesión</button>
+                    <button type="button" id="out" class="btn btn-logOut">Si, cerrar sesión</button>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<script>
+    let btnOut =document.getElementById("out");
+
+    btnOut.addEventListener("click",function(){
+        location.href = './index.php?status=out';
+    })
+</script>

@@ -23,6 +23,43 @@ function getTareas()
     }
 }
 
+
+function getTareasAmigo($id)
+{
+    global $conn;
+
+    if ($conn) {
+        $sentencia = "SELECT * FROM task where id_user='" . $id . "'";
+
+        $resultado = mysqli_query($conn, $sentencia);
+
+        mysqli_data_seek($resultado, 0);
+
+        $extraido = mysqli_fetch_all($resultado);
+        return $extraido;
+    } else {
+        die('<strong>No pudo conectarse:</strong>');
+    }
+}
+
+function getTareasNombre($user)
+{
+    global $conn;
+
+    if ($conn) {
+        $sentencia = "SELECT * FROM task where id_user in (select id_user from user where nickname = '{$user}');";
+
+        $resultado = mysqli_query($conn, $sentencia);
+
+        mysqli_data_seek($resultado, 0);
+
+        $extraido = mysqli_fetch_all($resultado);
+        return $extraido;
+    } else {
+        die('<strong>No pudo conectarse:</strong>');
+    }
+}
+
 function getTareasActivas()
 {
     global $conn;
@@ -72,7 +109,6 @@ function getTareasCompletas()
     global $conn;
 
     $id = $_SESSION["idUser"];
-    $hoy = date("Y-m-d");
 
     if ($conn) {
         $sentencia = "SELECT * FROM task where id_user='" . $id . "' and completado = 1";
@@ -94,6 +130,26 @@ function getTareas_IDTarea($id)
 
     if ($conn) {
         $sentencia = "SELECT * FROM task where id_task='" . $id . "'";
+
+        $resultado = mysqli_query($conn, $sentencia);
+
+        mysqli_data_seek($resultado, 0);
+
+        $extraido = mysqli_fetch_all($resultado);
+        return $extraido;
+    } else {
+        die('<strong>No pudo conectarse:</strong>');
+    }
+}
+
+function getTareasTipo($tipo)
+{
+    global $conn;
+
+    $id = $_SESSION["idUser"];
+
+    if ($conn) {
+        $sentencia = "SELECT * FROM task where id_user='" . $id . "' and tipo = '".$tipo."';";
 
         $resultado = mysqli_query($conn, $sentencia);
 

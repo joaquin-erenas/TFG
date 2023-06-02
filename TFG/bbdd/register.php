@@ -16,11 +16,9 @@ function registrarUsuario($name,$subname,$mail,$user,$passwd){
     if ($agregar_user > 0) {
       // Confirmamos
       mysqli_commit($conn);
-      mysqli_close($conn);
       return true;
     } else {
       mysqli_rollback($conn);
-      mysqli_close($conn);
       return false;
     }
 

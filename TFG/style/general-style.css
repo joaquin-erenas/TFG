@@ -147,3 +147,10 @@ h1,h2,h3,h4 {
     outline: 1px solid #ca160f;
     color: #fff;
 }
+
+.pPicture {
+    border-radius: 50%;
+    max-height: 50%;
+    max-width: 10%;
+    
+}

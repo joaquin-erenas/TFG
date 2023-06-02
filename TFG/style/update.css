@@ -1,0 +1,43 @@
+#contenedorUpdate {
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f7fb;
+    position:relative;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenedorUpdate #gridPlans {
+    width: 70%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+
+#contenedorUpdate #gridPlans .plan {
+    outline: 1px solid rgba(0, 0, 0, 0.082);
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-image: url("../media/tiny_grid.png");
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#contenedorUpdate #gridPlans .plan img {
+    max-width: 90%;
+    max-height: 350px;
+    margin-bottom: 40px;
+}
+
+#contenedorUpdate #gridPlans .plan:hover {
+    transform: scale(1.1);
+}

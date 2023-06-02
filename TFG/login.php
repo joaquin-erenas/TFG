@@ -16,6 +16,7 @@
 
 <body>
     <?php
+    session_start();
     require_once("./struct/header.php");
 
     if (isset($_GET["error"])) {
@@ -24,6 +25,8 @@
             $invalid = true;
         }else if($e == 2){
             $camps = true;
+        }else if($e == "log"){
+            $log = true;
         }
     }
     ?>
@@ -31,7 +34,7 @@
     <div id="contenedorLogin">
         <div id="loginGrid">
             <div id="loginImg">
-                <img src="./media/AdobeStock_237036853.jpeg" alt="">
+                <img src="./media/undraw_spreadsheet_re_cn18.svg" alt="">
             </div>
             <div id="loginForm">
                 <form action="./app/index.php" method="post">
@@ -48,6 +51,12 @@
                         echo <<< EOT
                         <div class="alert alert-warning" role="alert">
                             Debes rellenar ambos campos ✍️
+                        </div>
+                        EOT;
+                    }else if(isset($log)){
+                        echo <<< EOT
+                        <div class="alert alert-warning" role="alert">
+                            Debes iniciar sesión para ver los planes ✍️
                         </div>
                         EOT;
                     }
@@ -76,7 +85,6 @@
                                 Remember me
                             </label>
                         </div>
-                        <a href="#">Forgot password</a>
                     </div>
                     <input type="submit" name="login" id="login" class="btn btn-principal" value="Log in">
                     <a href="./register.php" class="btn btn-secundario" id="btnRegister">Or sign up</a>
@@ -100,3 +108,8 @@
 </body>
 
 </html>
+
+
+<script>
+
+</script>

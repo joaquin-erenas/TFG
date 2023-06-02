@@ -161,7 +161,7 @@ if (isset($_GET["taskDateStart"]) && !empty($_GET["taskDateStart"])) {
                                     echo <<< EOT
                                     <input type="date" name="taskDateStart" required class="form-control" id="floatingInputGrid" min="
                                     EOT;                                       
-                                    echo date('Y-m-d').">";
+                                    echo date('Y-m-d').'">';
                                 }
                                 ?>
                                 <label for="floatingInputGrid">Fecha de inicio</label>

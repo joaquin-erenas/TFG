@@ -22,3 +22,61 @@
     align-items: flex-start;
     flex-direction: column;
 }
+
+.bloqueado,#estadisticas{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #252a350a;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bloqueado #txtBlock {
+    color:#fff;
+    opacity: 0%;
+    transition: 0.4s;
+    margin-top: 15px;
+}
+
+.bloqueado #imgBlock {
+    display: flex;
+    transition: 0.4s;
+}
+
+.bloqueado #imgUnlock {
+    display: none;
+    transition: 0.4s;
+    max-width: 60%;
+}
+
+.bloqueado:hover {
+    background-color: var(--btnColor);
+}
+
+.bloqueado:hover #txtBlock{
+    opacity: 100%;
+}
+
+.bloqueado:hover #imgBlock{
+    display: none;
+}
+
+.bloqueado:hover #imgUnlock{
+    display: flex;
+}
+
+.bloqueado img{
+    max-width: 70%;
+}
+
+#estadisticas {
+    background-color: transparent;
+    cursor:initial;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

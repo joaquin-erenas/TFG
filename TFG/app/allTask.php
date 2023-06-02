@@ -59,9 +59,10 @@ if (isset($_GET["m"]) && !empty($_GET["m"])) {
             }
             ?>
         </div>
+        <br>
+        <br>
         <div id="newTaskGrid">
             <?php
-
             if ($tareasMostrar > 0) {
                 foreach ($tareasMostrar as $tarea) {
                     $taskId = $tarea[0];
@@ -109,7 +110,32 @@ if (isset($_GET["m"]) && !empty($_GET["m"])) {
                     if (isset($mostrar) && $mostrar) {
                         echo <<< EOT
                         <div id="$taskId" class="taskCard allTasks shadow">
-                        <div class="taskCard-footer allTasks shadow-sm" >
+                        <div class="taskCardImage">
+                        EOT;
+                        if ($tipo == "deporte") {
+                            echo '<img src="../media/undraw_pilates_ltw9.svg" alt="Tarea deporte">';
+                        }else if($tipo == "cocina"){
+                            echo '<img src="../media/undraw_cooking_p7m1.svg" alt="Tarea de cocina">';
+                        }else if($tipo == "mecanica"){
+                            echo '<img src="../media/undraw_automobile_repair_ywci.svg" alt="Tarea de mecanica">';
+                        }else if($tipo == "estudios"){
+                            echo '<img src="../media/undraw_mathematics_-4-otb.svg" alt="Tarea de estudios">';
+                        }else if($tipo == "crecimiento"){
+                            echo '<img src="../media/undraw_book_lover_re_rwjy.svg" alt="Tarea de crecimiento">';
+                        }else {
+                            $fotoRand = rand(1,3);
+                            if($fotoRand == 1) {
+                                echo '<img src="../media/undraw_coffee_with_friends_3cbj.svg" alt="Otra tarea">';
+                            }else if($fotoRand == 2){
+                                echo '<img src="../media/undraw_artificial_intelligence_re_enpp.svg" alt="Otra tarea">';
+                            }else {
+                                echo '<img src="../media/undraw_into_the_night_vumi.svg" alt="Otra tarea">';
+                            }
+                        }
+
+                        echo <<< EOT
+                        </div>
+                        <div class="taskCard-footer" style="justify-content:space-around">
                         <span>$tareaNombre</span>
                         <span>$emoji</span>
                         EOT;

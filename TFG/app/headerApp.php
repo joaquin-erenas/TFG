@@ -13,13 +13,13 @@
 
                 </ul>
 
-                <button class="btn btn-secundario" type="submit">Open Dashboard</button>
+                <button class="btn btn-secundario" id="btnDash" type="submit">Open Dashboard</button>
                 <div class="separadorMenu"></div>
                 <?php
 
                 if (isset($_SESSION["user"])) {
                     echo <<< EOT
-                        <a href="./app/index.php" class="btn btn-principal">{$_SESSION["user"]}</a>
+                        <a href="./index.php?w=profile&u={$_SESSION["user"]}" class="btn btn-principal">{$_SESSION["user"]}</a>
                         <button class="btn btn-logOut" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 13L16 11 7 11 7 8 2 12 7 16 7 13z"></path>
@@ -45,17 +45,33 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Cerrar sesión 😴</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    Deseas cerrar la sesión de <?php echo '<b>'.$_SESSION["user"].'</b> ? '?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-logOut">Si, cerrar sesión</button>
+                    <button type="button" id="out" class="btn btn-logOut">Si, cerrar sesión</button>
                 </div>
             </div>
         </div>
     </div>
 </header>
+
+<script>
+    let btnOut = document.getElementById("out");
+
+    btnOut.addEventListener("click",function(){
+        location.href = './index.php?status=out';
+    })
+</script>
+
+<script>
+    let btnDash = document.getElementById("btnDash");
+
+    btnDash.addEventListener("click",function() {
+        location.href = './index.php';
+    })
+</script>
